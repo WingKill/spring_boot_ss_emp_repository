@@ -5,5 +5,7 @@ import java.util.List;
 import edu.sejong.ex.vo.DeptVo;
 
 public interface DeptRepository {
-	public List<DeptVo> selectList();	
+	List<DeptVo> selectList();	
+	void insert(DeptVo deptVo);
+	void delete(DeptVo deptVo);
 }
