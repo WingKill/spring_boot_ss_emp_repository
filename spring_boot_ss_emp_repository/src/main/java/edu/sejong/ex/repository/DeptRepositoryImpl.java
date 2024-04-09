@@ -58,8 +58,6 @@ public class DeptRepositoryImpl implements DeptRepository{
 				e1.printStackTrace();
 			}
 		}
-		
-		
 		return deptList;
 	}
 

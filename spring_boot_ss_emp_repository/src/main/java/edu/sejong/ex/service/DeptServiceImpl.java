@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import edu.sejong.ex.repository.DeptRepository;
 import edu.sejong.ex.vo.DeptVo;
+import lombok.extern.slf4j.Slf4j;
 
 // @Component + 의미(Command) 
 @Service 
@@ -18,7 +19,6 @@ public class DeptServiceImpl implements DeptService {
 	@Override
 	public List<DeptVo> getList() {
 		System.out.println("getList()..");
-		
 		return deptRepository.selectList();
 	}
 

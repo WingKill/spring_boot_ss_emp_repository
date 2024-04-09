@@ -29,6 +29,12 @@ public class DeptController {
 		return "/dept/list";
 	}
 	
+	@RequestMapping("/insert_view")
+	public String insert() {
+		System.out.println("insert()..");
+		return "/dept/insert";
+	}
+	
 	@PostMapping("/register")
 	public String register(DeptVo deptVo) {
 		service.register(deptVo);		
