@@ -37,8 +37,9 @@ public class RspController {
 	public String result(Model model,@RequestParam("rsp") String rsp, RspVo playerVo, RspVo computerVo) {
 		playerVo.setRsp(rsp);
 		rspService.rspPlayers(playerVo, computerVo);
-		
-		return "forward:/rsp/game";
+		model.addAttribute("player", playerVo);
+		model.addAttribute("computer", computerVo);
+		return "/game/rsp_game";
 	}
 	
 }
