@@ -18,7 +18,7 @@ public class LottoController {
 	
 	@GetMapping("/list.do")
 	public String lottoSetting(Model model) {
-		model.addAttribute("lotto", lottoService.numbers());
+		model.addAttribute("lotto", lottoService.numbers());		
 		return "/game/lotto_list";
 	}
 	

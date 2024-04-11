@@ -26,8 +26,7 @@ class RspServiceImplTest {
 	@Test
 	void testRspPlayers() {
 		RspVo rspPlayer = new RspVo();
-		rspPlayer.setRsp("가위");
-		List<RspVo> list =  rspService.rspPlayers(rspPlayer);
+		List<RspVo> list =  rspService.players("가위", rspPlayer);
 		for(RspVo member : list) {
 			log.info("각각의 rsp 값 : " + member.getRsp());
 			log.info("각각의 rsp 이미지 값 : " + member.getImage());

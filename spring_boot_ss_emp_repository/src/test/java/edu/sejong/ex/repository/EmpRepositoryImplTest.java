@@ -2,8 +2,6 @@ package edu.sejong.ex.repository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.sql.Timestamp;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -40,7 +38,7 @@ class EmpRepositoryImplTest {
 
 	@Test
 	void testInsert() {
-		empRepository.insert(new EmpVo(500, "텟1", "텟2", 752, new Timestamp(System.currentTimeMillis()), 100, "20", 20));
+		empRepository.insert(new EmpVo(500, "텟1", "텟2", 752, null, 100, "20", 20,"2024-04-07"));
 		for(EmpVo emp : empRepository.selectList()) {
 			System.out.println("==========================");
 			System.out.println("사원번호 : " + emp.getEmpno() );
@@ -57,7 +55,7 @@ class EmpRepositoryImplTest {
 	
 	@Test
 	void testDelete() {
-		empRepository.delete(new EmpVo(500, "텟1", "텟2", 752, new Timestamp(System.currentTimeMillis()), 100, "20", 20));
+		empRepository.delete(new EmpVo(500, "텟1", "텟2", 752, null, 100, "20", 20,"2024-04-07"));
 		for(EmpVo emp : empRepository.selectList()) {
 			System.out.println("==========================");
 			System.out.println("사원번호 : " + emp.getEmpno() );

@@ -32,7 +32,7 @@
                             <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/lotto/list.do">로또</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="${pageContext.request.contextPath}/rsp/rsp_game">가위바위보</a>
+                            <a class="nav-link active" href="${pageContext.request.contextPath}/rsp/game">가위바위보</a>
                         </li>
 <%--                         <li class="nav-item">
                             <a class="nav-link" href="${pageContext.request.contextPath}/board/list.do">게시판</a>
@@ -57,7 +57,7 @@
                     	<img src="${player.image}" class="card-img-top" alt="...">              	
                         <div class="card-body text-center">
                             <h5 class="card-title">당신</h5>   
-	                        <form action="${pageContext.request.contextPath}/rsp/result.do">         
+	                        <form action="${pageContext.request.contextPath}/rsp/result.do" method="post">         
 	                            <input type="submit" class="btn btn-primary m-2" name="rsp" value="가위">
 	                            <input type="submit" class="btn btn-primary m-2" name="rsp" value="바위">
 	                            <input type="submit" class="btn btn-primary m-2" name="rsp" value="보">

@@ -38,7 +38,7 @@
 							<a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/lotto/list.do">로또</a>
 						</li>
 						<li class="nav-item">
-                            <a class="nav-link" href="${pageContext.request.contextPath}/rsp/rsp_game">가위바위보</a>
+                            <a class="nav-link" href="${pageContext.request.contextPath}/rsp/game">가위바위보</a>
                         </li>
 <%--                         <li class="nav-item">
                             <a class="nav-link" href="${pageContext.request.contextPath}/board/list.do">게시판</a>                          

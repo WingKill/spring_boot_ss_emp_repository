@@ -78,7 +78,8 @@ public class EmpRepositoryImpl implements EmpRepository {
 			pstmt.setString(2, empVo.getEname());
 			pstmt.setString(3, empVo.getJob());
 			pstmt.setInt(4, empVo.getMgr());
-			pstmt.setTimestamp(5, empVo.getHiredate());
+			//pstmt.setTimestamp(5, empVo.getHiredate());
+			pstmt.setString(5, empVo.getHiredateStr());
 			pstmt.setInt(6, empVo.getSal());
 			pstmt.setString(7, empVo.getComm());
 			pstmt.setInt(8, empVo.getDeptno());

@@ -2,7 +2,7 @@ package edu.sejong.ex.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.sql.Timestamp;
+//import java.sql.Timestamp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +39,7 @@ class EmpServiceImplTest {
 	}
 	@Test
 	void testRegister() {
-		empService.register(new EmpVo(20, "텟", "텟2", 30, new Timestamp(System.currentTimeMillis()), 200, null, 20));
+		empService.register(new EmpVo(20, "텟", "텟2", 30, null, 200, null, 20,"2023-04-26"));
 		for(EmpVo emp : empService.getList()) {
 			System.out.println("==========================");
 			System.out.println("사원번호 : " + emp.getEmpno() );
@@ -56,7 +56,7 @@ class EmpServiceImplTest {
 	
 	@Test
 	void testRemove() {
-		empService.remove(new EmpVo(20, "텟", "텟2", 30, new Timestamp(System.currentTimeMillis()), 200, null, 20));
+		empService.remove(new EmpVo(20, "텟", "텟2", 30, null, 200, null, 20,"2023-04-26"));
 		for(EmpVo emp : empService.getList()) {
 			System.out.println("==========================");
 			System.out.println("사원번호 : " + emp.getEmpno() );

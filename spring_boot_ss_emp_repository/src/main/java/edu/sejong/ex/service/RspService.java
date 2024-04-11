@@ -6,5 +6,5 @@ import edu.sejong.ex.vo.RspVo;
 
 
 public interface RspService {
-	List<RspVo> rspPlayers(RspVo rspPlayer);
+	List<RspVo> players(String rsp, RspVo rspPlayer);
 }
