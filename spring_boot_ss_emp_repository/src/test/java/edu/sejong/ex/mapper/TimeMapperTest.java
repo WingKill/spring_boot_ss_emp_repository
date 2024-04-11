@@ -38,4 +38,14 @@ class TimeMapperTest {
 			log.info("나오는 객체 내 번호 : " + emp.getEmpno());
 		}		
 	}
+	
+	@Test
+	void testGetTime2() {
+		log.info("현재 시간 : " + timeMapper.getTime2());
+	}
+	
+	@Test
+	void testGetOnePlusOne2() {
+		log.info("나오는 값 : " + timeMapper.getOnePlusOne2());
+	}
 }

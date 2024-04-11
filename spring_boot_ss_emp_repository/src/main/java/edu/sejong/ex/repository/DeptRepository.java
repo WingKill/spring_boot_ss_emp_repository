@@ -6,6 +6,6 @@ import edu.sejong.ex.vo.DeptVo;
 
 public interface DeptRepository {
 	List<DeptVo> selectList();	
-	void insert(DeptVo deptVo);
-	void delete(DeptVo deptVo);
+//	void insert(DeptVo deptVo);
+//	void delete(DeptVo deptVo);
 }

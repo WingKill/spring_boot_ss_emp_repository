@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -61,75 +62,81 @@ public class DeptRepositoryImpl implements DeptRepository{
 		return deptList;
 	}
 
-	@Override
-	public void insert(DeptVo deptVo) {
+//	@Override
+//	public void insert(DeptVo deptVo) {
+//		  try {
+//		  sqlSession.insert("edu.sejong.ex.mapper.DeptMapper.insertDept", deptVo);
+//		  sqlSession.commit(); // 변경 내용을 커밋 
+//		  } finally { sqlSession.close(); }
+//		 
 		
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		int result = 0;
 		
-		String query = "insert into dept(deptno, dname, loc) values(?,?,?)";
-		try {
-			conn = dataSource.getConnection();
-			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, deptVo.getDeptno());
-			pstmt.setString(2, deptVo.getDname());
-			pstmt.setString(3, deptVo.getLoc());
-			result = pstmt.executeUpdate();
-			
-			if(result > 0)
-				System.out.println("insert successed");
-			else
-				System.out.println("insert failed");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			try {			
-				if(pstmt != null) {
-					pstmt.close();
-				}
-				if(conn != null) {
-					conn.close();
-				}
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-		}
+//		Connection conn = null;
+//		PreparedStatement pstmt = null;
+//		int result = 0;
+//		
+//		String query = "insert into dept(deptno, dname, loc) values(?,?,?)";
+//		try {
+//			conn = dataSource.getConnection();
+//			pstmt = conn.prepareStatement(query);
+//			pstmt.setInt(1, deptVo.getDeptno());
+//			pstmt.setString(2, deptVo.getDname());
+//			pstmt.setString(3, deptVo.getLoc());
+//			result = pstmt.executeUpdate();
+//			
+//			if(result > 0)
+//				System.out.println("insert successed");
+//			else
+//				System.out.println("insert failed");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}finally {
+//			try {			
+//				if(pstmt != null) {
+//					pstmt.close();
+//				}
+//				if(conn != null) {
+//					conn.close();
+//				}
+//			} catch (Exception e2) {
+//				e2.printStackTrace();
+//			}
+//		}
 		
-	}
-
-	@Override
-	public void delete(DeptVo deptVo) {
-		
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		int result = 0;
-		
-		String query = "delete from dept where deptno = ?";
-		try {
-			conn = dataSource.getConnection();
-			pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, deptVo.getDeptno());
-			result = pstmt.executeUpdate();
-			
-			if(result > 0)
-				System.out.println("delete successed");
-			else
-				System.out.println("delete failed");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally {
-			try {			
-				if(pstmt != null) {
-					pstmt.close();
-				}
-				if(conn != null) {
-					conn.close();
-				}
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-		}
-		
-	}
+//	}
+//
+//	@Override
+//	public void delete(DeptVo deptVo) {
+//		
+//		Connection conn = null;
+//		PreparedStatement pstmt = null;
+//		int result = 0;
+//		
+//		String query = "delete from dept where deptno = ?";
+//		try {
+//			conn = dataSource.getConnection();
+//			pstmt = conn.prepareStatement(query);
+//			pstmt.setInt(1, deptVo.getDeptno());
+//			result = pstmt.executeUpdate();
+//			
+//			if(result > 0)
+//				System.out.println("delete successed");
+//			else
+//				System.out.println("delete failed");
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}finally {
+//			try {			
+//				if(pstmt != null) {
+//					pstmt.close();
+//				}
+//				if(conn != null) {
+//					conn.close();
+//				}
+//			} catch (Exception e2) {
+//				e2.printStackTrace();
+//			}
+//		}
+//		
+//	}
 }

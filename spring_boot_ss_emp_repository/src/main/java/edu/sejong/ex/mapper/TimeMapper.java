@@ -1,7 +1,6 @@
 package edu.sejong.ex.mapper;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -19,4 +18,8 @@ public interface TimeMapper {
 	
 	@Select("select * from emp")
 	public ArrayList<EmpVo> getEmps();
+	
+	public String getTime2();
+	
+	public String getOnePlusOne2();
 }
