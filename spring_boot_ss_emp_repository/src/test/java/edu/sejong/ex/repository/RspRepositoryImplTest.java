@@ -25,9 +25,7 @@ class RspRepositoryImplTest {
 	void testPlayers() {		
 		RspVo rspPlayer = new RspVo();
 		rspPlayer.setRsp("가위");
-		RspVo rspComputer = new RspVo(1);
-		rspPlayer.rspGame(rspComputer);
-		for(RspVo member : repository.players(rspPlayer, rspComputer)) {
+		for(RspVo member : repository.players(rspPlayer)) {
 			log.info("각각의 rsp 값 : " + member.getRsp());
 			log.info("각각의 rsp 이미지 값 : " + member.getImage());
 			log.info("승부 : " + member.getResult());

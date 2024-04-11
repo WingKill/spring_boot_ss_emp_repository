@@ -15,7 +15,7 @@ public class RspServiceImpl implements RspService{
 	private RspRepository repository;
 	
 	@Override
-	public List<RspVo> rspPlayers(RspVo rspPlayer, RspVo rspComputer) {
-		return repository.players(rspPlayer, rspComputer);
+	public List<RspVo> rspPlayers(RspVo rspPlayer) {
+		return repository.players(rspPlayer);
 	}
 }
